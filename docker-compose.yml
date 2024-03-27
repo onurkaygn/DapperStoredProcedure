@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  dappersptest:
+    image: ${DOCKER_REGISTRY-}dappersptest
+    build:
+      context: .
+      dockerfile: DapperSPTest/Dockerfile
+
+    env_file:
+      - "DapperSpTest/.env"
